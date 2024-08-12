@@ -12,11 +12,11 @@ div#conteiner{
 }
 nav{
     display: flex;
-    flex-flow: columnaaaaa;
+    flex-flow: column;
     width: 15%;
 }
 
-.menuH{aaaaa
+.menuH{
     width: 100%;
     background-color: aquamarine;
 }
