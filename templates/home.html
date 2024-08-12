@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id='conteiner'>
+        <nav>
+            <div class="menuH">
+                <img src="../Group 39.png" style="width: 32px;">
+            </div>
+            <div class="opcs aberto">
+                <ul>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            dasljdas
+        </main>
+    </div>
+
+    
+    <script>
+
+        function shiftOC(teste) {
+            if (teste[1] == "aberto") {
+                teste.remove('aberto')
+                teste.add('fechado')
+            }else{
+               teste.remove('fechado')
+               teste.add('aberto')
+            }
+        }
+
+        let menuI = document.querySelector('.menuH > img')
+        let sideBar = document.querySelector('.opcs')
+        menuI.addEventListener('click', ()=>{
+            shiftOC(document.querySelector('.opcs').classList)
+            if(document.querySelector('.opcs').classList[1] != "aberto"){
+                sideBar.style.width = '0px';
+                document.querySelector('nav').style.width = 'min-content'
+            }else{
+                sideBar.style.width = '100%';
+                document.querySelector('nav').style.width = '15%'
+            }
+        })
+    </script>
+</body>
+</html>

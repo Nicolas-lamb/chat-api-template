@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --linear-color: linear-gradient(to bottom, #0D1B36 0%, #0E0521 71%, #01050f 100%);
+    --color : rgba(195, 163, 100, 1);
+
+}
+
+
+
