@@ -15,7 +15,9 @@ nav{
     flex-flow: column;
     width: 15%;
 }
-
+ul{
+    list-style: none;
+}
 .menuH{
     width: 100%;
     background-color: aquamarine;
