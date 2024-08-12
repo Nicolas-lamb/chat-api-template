@@ -11,19 +11,21 @@
 <body>
 
     <div id='conteiner'>
-        <nav>
+        <div class="section">
             <div class="menuH">
                 <img src="../Group 39.png" style="width: 32px;">
             </div>
-            <div class="opcs aberto">
-                <ul>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                </ul>
-            </div>
-        </nav>
+            <nav>
+                <div class="opcs aberto">
+                    <ul>
+                        <li>teste</li>
+                        <li>teste</li>
+                        <li>teste</li>
+                        <li>teste</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <main>
             dasljdas
         </main>
@@ -43,15 +45,15 @@
         }
 
         let menuI = document.querySelector('.menuH > img')
-        let sideBar = document.querySelector('.opcs')
+        let sideBar = document.querySelector('.section')
         menuI.addEventListener('click', ()=>{
             shiftOC(document.querySelector('.opcs').classList)
             if(document.querySelector('.opcs').classList[1] != "aberto"){
                 sideBar.style.width = '0px';
-                document.querySelector('nav').style.width = 'min-content'
+                document.querySelector('main').style.width = '100%'
             }else{
-                sideBar.style.width = '100%';
-                document.querySelector('nav').style.width = '15%'
+                sideBar.style.width = '15%';
+                document.querySelector('main').style.width = '75%'
             }
         })
     </script>

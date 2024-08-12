@@ -18,16 +18,34 @@ nav{
 ul{
     list-style: none;
 }
+
+.section{
+    background-color: brown;
+    width: 15%;
+}
 .menuH{
-    width: 100%;
-    background-color: aquamarine;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .opcs{
-    background-color: rgb(51, 51, 108);
     width: 100%;
+    margin-top: 50px;
+}
+
+.aberto{
+    background-color: aqua;
+    display: block;
+}
+
+.fechado{
+    display: none;
 }
 
 main{
     width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
