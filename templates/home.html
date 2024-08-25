@@ -6,56 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/root.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-
-    <div id='conteiner'>
-        <div class="section">
-            <div class="menuH">
-                <img src="../Group 39.png" style="width: 32px;">
-            </div>
-            <nav>
-                <div class="opcs aberto">
-                    <ul>
-                        <li>teste</li>
-                        <li>teste</li>
-                        <li>teste</li>
-                        <li>teste</li>
-                    </ul>
-                </div>
-            </nav>
+    <div class="side_bar disable">
+        <div class="icon_menu">
+            <span class="icon material-symbols-outlined" >
+                menu
+            </span>
         </div>
-        <main>
-            dasljdas
-        </main>
+        <ul class="disable">
+            <span class="salas">Salas Disponíveis</span>
+            <li><span class="opc_img material-symbols-outlined">sports_soccer</span><span class="opc_text">Esportes</span></li>
+            <li><span class="opc_img material-symbols-outlined">spa</span><span class="opc_text">Saúde e beleza</span></li>
+            <li><span class="opc_img material-symbols-outlined">movie</span><span class="opc_text">Filmes e series</span></li>
+            <li><span class="opc_img material-symbols-outlined">sports_esports</span><span class="opc_text">Jogos</span></li>
+            <li><span class="opc_img material-symbols-outlined">menu_book</span><span class="opc_text">Livros</span></li>
+        </ul>
     </div>
+    <div class="chat">Bem-Vindo</div>
 
-    
-    <script>
-
-        function shiftOC(teste) {
-            if (teste[1] == "aberto") {
-                teste.remove('aberto')
-                teste.add('fechado')
-            }else{
-               teste.remove('fechado')
-               teste.add('aberto')
-            }
-        }
-
-        let menuI = document.querySelector('.menuH > img')
-        let sideBar = document.querySelector('.section')
-        menuI.addEventListener('click', ()=>{
-            shiftOC(document.querySelector('.opcs').classList)
-            if(document.querySelector('.opcs').classList[1] != "aberto"){
-                sideBar.style.width = '0px';
-                document.querySelector('main').style.width = '100%'
-            }else{
-                sideBar.style.width = '15%';
-                document.querySelector('main').style.width = '75%'
-            }
-        })
-    </script>
+    <script src="../scripts/home.js"></script>
 </body>
 </html>

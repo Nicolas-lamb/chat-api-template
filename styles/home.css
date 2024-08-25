@@ -1,51 +1,103 @@
-
-
 body{
-    width: 100vw;
-    height: 100vh;
-}
-div#conteiner{
-    display: flex;
-    flex-direction: row;
-    background: var(--linear-color);
-    height: 100vh;
-}
-nav{
-    display: flex;
-    flex-flow: column;
-    width: 15%;
-}
-ul{
-    list-style: none;
+  display: flex;
+  width: 100vw;
+  background-image: var(--linear-color);
+  overflow: hidden;
+  height: 100vh;
 }
 
-.section{
-    background-color: brown;
-    width: 15%;
-}
-.menuH{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+/* menu +++++++++++++++++++++++++++++++++++++++++++ */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
-.opcs{
-    width: 100%;
-    margin-top: 50px;
+.side_bar{
+  position: relative;
 }
 
-.aberto{
-    background-color: aqua;
-    display: block;
+.side_bar.disable{
+ width: 0px;
 }
 
-.fechado{
-    display: none;
+.side_bar > .icon_menu{
+  position: absolute;
+  cursor: pointer;
+  padding: 0px;
+  z-index: 1;
+  user-select: none;
 }
 
-main{
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.side_bar > .icon_menu > .icon{
+  font-size: 40px;
+  color: var(--color);
+}
+
+.side_bar > ul{
+  padding: 50px 0px 0px 0px;
+  background-color: #0e0e0eab;
+  width: 200px;
+  height: 100vh;
+  transition: .3s;
+}
+
+.side_bar > .disable{
+  left: -300px;
+  transform: translateX(-300px);
+}
+
+.side_bar > ul > .salas{
+  color: rgba(255, 255, 255, 0.459);
+  font-size: 13px;
+  padding-left: 10px;
+  line-height: 20px;
+}
+
+.side_bar > ul > li {
+  line-height: 60px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: .3s;
+  color: rgba(255, 255, 255, 0.459);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.side_bar > ul > li:hover{
+  background-color: #121212;
+  border-right: 3px solid white;
+  color: white;
+}
+
+.side_bar > ul > li > .opc_img{
+  color: var(--color_disable);
+  transition: .2s;
+}
+
+.side_bar > ul > li:hover > .opc_img{
+  color: var(--color);
+  transform: scale(108%);
+}
+
+/* menu +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.chat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: xx-large;
+  color: var(--color);
 }

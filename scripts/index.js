@@ -2,7 +2,6 @@ let nome = document.querySelector("#inome")
 
 window.onload = function(){ 
  nome.focus(); 
- 
 }
 
 function Input_event(){
@@ -11,5 +10,4 @@ function Input_event(){
     else{
         nome.style.textAlign = 'center'
     }
-    
 }
