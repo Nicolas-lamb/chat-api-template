@@ -1,11 +1,28 @@
 let menu = document.querySelector('.side_bar > ul')
 let humb = document.querySelector('.icon_menu')
-
-
 humb.addEventListener('click' ,()=>{
     menu.classList.toggle('disable')
+    document.querySelector('.icon').classList.toggle('act')
     document.querySelector('.side_bar').classList.toggle('disable')
 })
+
+let teste = document.querySelectorAll('.side_bar > ul > li')
+
+teste.forEach(element => {
+    element.addEventListener('click', ()=>{
+       for(i = 0; i < teste.length; i++ ){
+        teste[i].classList.remove('act')
+       }
+        element.classList.add('act')
+    })
+});
+
+
+const params = new URLSearchParams(window.location.search);
+const nome = params.get('nome');
+document.querySelector('.user_name').innerHTML = nome
+document.querySelector('.boas_vindas').innerHTML = `Bem-vindo ${nome}`
+
 
 const mensagens = [
     "Esta é uma mensagem que se ajusta ao conteúdo",
@@ -33,6 +50,7 @@ const mensagens = [
   chats.forEach(chat => {
     chat.addEventListener('click', function() {
         
+
         chatDiv.style.justifyContent = 'left';
         
 
@@ -62,12 +80,11 @@ const mensagens = [
     }
 
     function listarMensagens(){
-        const chatPar = document.querySelector('.chat > p');
+        const bem_vindo = document.querySelector('.bem_vindo')
+
         const mensagensDiv = document.querySelector('#mensagens')
 
-        
-        
-        chatPar.innerHTML = ''
+        bem_vindo.innerHTML = ''
         mensagensDiv.innerHTML = ''
         
         
