@@ -2,9 +2,10 @@ body{
   display: flex;
   width: 100vw;
   background-image: var(--linear-color);
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
 }
+
 
 /* menu +++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -94,10 +95,47 @@ body{
 
 .chat{
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
-  text-align: center;
   width: 100%;
+  height: 100vh;
   font-size: xx-large;
   color: var(--color);
+  flex-direction: column; 
+}
+
+#mensagens{
+  margin-top: 60px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mensagem {
+  
+  letter-spacing: 1px;
+  font-size: 20px;
+  align-self: flex-start; /* Alinha a mensagem ao topo */
+  padding: 10px;
+  margin: 5px 0;
+  color: #ffffff;
+  background-color: #797979;
+  max-width: 60%;
+  border-radius: 5px;
+}
+
+#meuFormulario{
+  display: none;
+  position: fixed;
+  padding-bottom: 20px;
+  bottom: 0px;
+  background-color: #0E0521;
+  width: calc(100% - 200px);
+  text-align: center;
+  border-top: #0000001e solid 10px;
+  
 }
