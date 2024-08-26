@@ -42,7 +42,7 @@
   
   .side_bar > ul{
     padding: 50px 0px 0px 0px;
-    background-color: #0e0e0eab;
+    background-color: #0e0e0efb;
     width: 200px;
     height: 100vh;
     transition: .3s;
@@ -106,4 +106,16 @@
     top: 0;
     left: 0;
     z-index: 1;
+  }
+
+  .block_menu{
+    width: 225px;
+  }
+
+  .block_menu.act{
+    width: 0;
+  }
+
+  .block_menu.act2{
+   width: 0;
   }

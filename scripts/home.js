@@ -4,6 +4,7 @@ humb.addEventListener('click' ,()=>{
     menu.classList.toggle('disable')
     document.querySelector('.icon').classList.toggle('act')
     document.querySelector('.side_bar').classList.toggle('disable')
+    document.querySelector('.block_menu').classList.toggle('act')
 })
 
 let teste = document.querySelectorAll('.side_bar > ul > li')
@@ -105,5 +106,20 @@ const mensagens = [
 
 
   console.log(chats)
+
+
+function checkBodyWidth() {
+    var bodyWidth = document.body.clientWidth;
+
+    if (bodyWidth < 785) {
+        document.querySelector('.block_menu').classList.add('act2')
+    } else {
+        document.querySelector('.block_menu').classList.remove('act2')
+    }
+}
+
+checkBodyWidth();
+
+window.addEventListener('resize', checkBodyWidth);
 
   
