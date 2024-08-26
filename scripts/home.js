@@ -34,13 +34,13 @@ const mensagens = [
     "Que bom saber!",
     "Que bom saber!",
     "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!",
-    "Que bom saber!"
+     "Que bom saber!",
+     "Que bom saber!",
+     "Que bom saber!",
+     "Que bom saber!",
+     "Que bom saber!",
+     "Que mal saber!",
+   
 
   ];
 
@@ -63,17 +63,22 @@ const mensagens = [
     function submitForm(){
         const formulario = document.getElementById('meuFormulario');
 
-        formulario.style.display='block'
+        formulario.style.display='flex'
 
         formulario.addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
     
-        const textoInput = document.getElementById('texto');
+        const textoInput = document.querySelector('#texto');
+        
         const texto = textoInput.value.trim(); // Pega o valor e remove espaços em branco
+ 
+        
+        
     
         if (texto) {
             mensagens.push(texto); // Adiciona a mensagem no array
             textoInput.value = ''; // Limpa o campo de texto
+            console.log(mensagens)
             listarMensagens(); // Atualiza a exibição das mensagens
         }
         });
@@ -96,7 +101,7 @@ const mensagens = [
           });
         
     }
-  
+   
 
 
   console.log(chats)

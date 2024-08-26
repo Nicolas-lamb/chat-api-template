@@ -8,10 +8,7 @@ body{
   background-attachment: fixed;
 }
 
-.chat{
-  width: 100%;
-  position: relative;
-}
+
 
 .user_name{
   color: var(--color);
@@ -63,9 +60,10 @@ body{
   display: flex;
   justify-content: center; 
   align-items: center;
-  gap: 10px;
+  gap: 18px;
   width: 100%;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .mensagem {
@@ -74,9 +72,10 @@ body{
   font-size: 20px;
   align-self: flex-start; /* Alinha a mensagem ao topo */
   padding: 10px;
-  margin: 5px 0;
+
   color: #ffffff;
   background-color: #797979;
+  overflow-wrap: break-word;
   max-width: 60%;
   border-radius: 5px;
 }
@@ -84,11 +83,36 @@ body{
 #meuFormulario{
   display: none;
   position: fixed;
-  padding-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
   bottom: 0px;
-  background-color: #0e052149;
-  width: 100%;
+  width: 50%;
   text-align: center;
-  border-top: #000000 solid 10px;
+  border-radius: 20px;
+  background-color: #1D1D1D;
+  padding: 10px;
   
+}
+#texto{
+  font-size: 18px;
+  border: none;
+  width: 85%;
+  color: white;
+  outline: none;
+  background-color: transparent;
+}
+
+#submitButton{
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 100px;
+  background-color: #89744B;
+}
+
+
+
+#submitButton > img{
+  width: 20px;
+  height: 20px;
 }
