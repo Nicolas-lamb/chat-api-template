@@ -1,6 +1,6 @@
 let menu = document.querySelector('.side_bar > ul')
 let humb = document.querySelector('.icon_menu')
-humb.addEventListener('click' ,()=>{
+humb.addEventListener('click', () => {
     menu.classList.toggle('disable')
     document.querySelector('.icon').classList.toggle('act')
     document.querySelector('.side_bar').classList.toggle('disable')
@@ -10,22 +10,24 @@ humb.addEventListener('click' ,()=>{
 let teste = document.querySelectorAll('.side_bar > ul > li')
 
 teste.forEach(element => {
-    element.addEventListener('click', ()=>{
-       for(i = 0; i < teste.length; i++ ){
-        teste[i].classList.remove('act')
-       }
+    element.addEventListener('click', () => {
+        for (i = 0; i < teste.length; i++) {
+            teste[i].classList.remove('act')
+        }
         element.classList.add('act')
     })
 });
-
 
 const params = new URLSearchParams(window.location.search);
 const nome = params.get('nome');
 document.querySelector('.user_name').innerHTML = nome
 document.querySelector('.boas_vindas').innerHTML = `Bem-vindo ${nome}`
 
+const mensagensEnviadas = [
+    "Bom dia"
+];
 
-const mensagens = [
+const mensagensRecebidas = [
     "Esta é uma mensagem que se ajusta ao conteúdo",
     "Sim, e você?",
     "Estou ótimo, obrigado!",
@@ -41,72 +43,58 @@ const mensagens = [
      "Que bom saber!",
      "Que bom saber!",
      "Que mal saber!",
-   
+];
 
-  ];
+const chatDiv = document.querySelector('.chat');
+const chats = document.querySelectorAll('.side_bar > ul > li')
 
-  const chatDiv = document.querySelector('.chat');
-  const chats = document.querySelectorAll('.side_bar > ul >li')
-
-  chats.forEach(chat => {
-    chat.addEventListener('click', function() {
-        
-
+chats.forEach(chat => {
+    chat.addEventListener('click', function () {
         chatDiv.style.justifyContent = 'left';
-        
-
         listarMensagens();
-        submitForm()
-       
+        submitForm();
     });
-  });
+});
 
-    function submitForm(){
-        const formulario = document.getElementById('meuFormulario');
+function submitForm() {
+    const formulario = document.getElementById('meuFormulario');
+    formulario.style.display = 'flex';
 
-        formulario.style.display='flex'
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault(); 
 
-        formulario.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-    
         const textoInput = document.querySelector('#texto');
-        
-        const texto = textoInput.value.trim(); // Pega o valor e remove espaços em branco
- 
-        
-        
-    
+        const texto = textoInput.value.trim();
+
         if (texto) {
-            mensagens.push(texto); // Adiciona a mensagem no array
-            textoInput.value = ''; // Limpa o campo de texto
-            console.log(mensagens)
-            listarMensagens(); // Atualiza a exibição das mensagens
+            mensagensEnviadas.push(texto);
+            textoInput.value = ''; 
+            listarMensagens();
         }
-        });
-    }
+    });
+}
 
-    function listarMensagens(){
-        const bem_vindo = document.querySelector('.bem_vindo')
+function listarMensagens() {
+    const bem_vindo = document.querySelector('.bem_vindo')
+    const mensagensDiv = document.querySelector('#mensagens')
 
-        const mensagensDiv = document.querySelector('#mensagens')
+    bem_vindo.innerHTML = ''
+    mensagensDiv.innerHTML = ''
 
-        bem_vindo.innerHTML = ''
-        mensagensDiv.innerHTML = ''
-        
-        
-        mensagens.forEach(mensagem => {
-            const mensagemDiv = document.createElement('div');
-            mensagemDiv.classList.add('mensagem');
-            mensagemDiv.textContent = mensagem;
-            mensagensDiv.appendChild(mensagemDiv)
-          });
-        
-    }
-   
+    mensagensRecebidas.forEach(mensagem => {
+        const mensagemDiv = document.createElement('div');
+        mensagemDiv.classList.add('mensagem', 'recebida');
+        mensagemDiv.textContent = mensagem;
+        mensagensDiv.appendChild(mensagemDiv);
+    });
 
-
-  console.log(chats)
-
+    mensagensEnviadas.forEach(mensagem => {
+        const mensagemDiv = document.createElement('div');
+        mensagemDiv.classList.add('mensagem', 'enviada');
+        mensagemDiv.textContent = mensagem;
+        mensagensDiv.appendChild(mensagemDiv);
+    });
+}
 
 function checkBodyWidth() {
     var bodyWidth = document.body.clientWidth;
@@ -119,7 +107,4 @@ function checkBodyWidth() {
 }
 
 checkBodyWidth();
-
 window.addEventListener('resize', checkBodyWidth);
-
-  

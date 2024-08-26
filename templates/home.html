@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="block_menu act"></div>
+    <div class="blackertop"></div>
+    <div class="block_menu"></div>
    <div class="position_fixed">
     <div class="side_bar disable">
         <div class="icon_menu">
@@ -18,7 +19,7 @@
                 menu
             </span>
         </div>
-        <ul class="disable">
+        <ul class="">
             <span class="salas">Salas Disponíveis</span>
             <li><span class="opc_img material-symbols-outlined">sports_soccer</span><span class="opc_text">Esportes</span></li>
             <li><span class="opc_img material-symbols-outlined">spa</span><span class="opc_text">Saúde e beleza</span></li>
@@ -35,10 +36,10 @@
             <p class="text_bem_vindo">Escolha uma das salas para<br>visualiza-la</p>
         </div>
         <form id="meuFormulario">
-            <input type="text" id="texto" placeholder="Digite sua mensagem" required>
+            <input autocomplete="off" type="text" id="texto" placeholder="Digite sua mensagem" required>
             <button id="submitButton"type="submit"><img src="../seta-diagonal.png"></button>
         </form>
-        <div id="mensagens"></div> <!-- Div separada para mensagens -->
+        <div id="mensagens"></div>
     </div>
     
     <div class="blacker"></div>
