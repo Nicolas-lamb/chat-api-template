@@ -99,7 +99,7 @@ function listarMensagens() {
 function checkBodyWidth() {
     var bodyWidth = document.body.clientWidth;
 
-    if (bodyWidth < 785) {
+    if (bodyWidth < 1000) {
         document.querySelector('.block_menu').classList.add('act2')
     } else {
         document.querySelector('.block_menu').classList.remove('act2')

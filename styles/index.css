@@ -1,8 +1,7 @@
-
-
 body{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 main#conteiner{
     display: flex;
@@ -15,12 +14,35 @@ main#conteiner{
 }
 
 main input{
-    color: rgba(246,239,226,19);
+    color: rgba(246, 239, 226, 0.514);
     border:none;
     outline: none;
     background-color: transparent;
     font-size: 32px ;
     
+}
+
+img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    transform: scale(120%);
+    padding: 50px;
+    transition: .2s;
+    opacity: .1;
+}
+
+.act{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    opacity: .7;
+    padding: 50px;
+    opacity: .6;
+    transform: scale(100%);
 }
 
 @media (max-width: 700px){

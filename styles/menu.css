@@ -8,11 +8,11 @@
   
   .side_bar{
     position: relative;
-    z-index: 2;
   }
   
   .side_bar.disable{
    width: 0px;
+   z-index: 2;
   }
   
   .side_bar > .icon_menu{
@@ -114,6 +114,7 @@
 
   .block_menu.act{
     width: 0;
+    
   }
 
   .block_menu.act2{
