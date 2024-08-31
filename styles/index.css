@@ -24,11 +24,10 @@ main input{
 
 img{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 50px;
+    right: 50px;
     width: 100px;
     transform: scale(120%);
-    padding: 50px;
     transition: .2s;
     opacity: .1;
 }
@@ -36,11 +35,10 @@ img{
 .act{
     display: block;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 50px;
+    right: 50px;
     width: 100px;
     opacity: .7;
-    padding: 50px;
     opacity: .6;
     transform: scale(100%);
 }
