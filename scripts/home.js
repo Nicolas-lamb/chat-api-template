@@ -101,8 +101,10 @@ function checkBodyWidth() {
 
     if (bodyWidth < 1000) {
         document.querySelector('.block_menu').classList.add('act2')
+        document.querySelector('.side_bar').style.width = "0"
     } else {
         document.querySelector('.block_menu').classList.remove('act2')
+        document.querySelector('.side_bar').style.width = "min-content"
     }
 }
 
