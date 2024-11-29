@@ -84,7 +84,7 @@ body{
   border-radius: 10px;
   max-width: 60%;
   word-wrap: break-word;
-  background-color: #89744B;
+  background-color: var(--color);
 }
 
 .mensagem.recebida {
@@ -124,8 +124,6 @@ body{
   border-radius: 100px;
   background-color: #89744B;
 }
-
-
 
 #submitButton > img{
   width: 20px;
